@@ -92,4 +92,42 @@ const picArray = [
   },
 ];
 
-// add your code here
+const pics = document.querySelector("#pictures");
+
+for(let it = 0; it < picArray.length; it++){
+  const a = document.createElement("article");
+  const h = document.createElement("h2");
+  const ht = document.createTextNode(picArray[it].title);
+  h.appendChild(ht);
+
+  const f = document.createElement("figure");
+
+  const i = document.createElement("img");
+  i.src = picArray[it].image.large;
+  i.title = picArray[it].title;
+  const fg = document.createElement("figcaption");
+  const fgt = document.createTextNode(picArray[it].caption);
+  fg.appendChild(fgt);
+  f.appendChild(i);
+  f.appendChild(fg);
+
+  const p = document.createElement("p");
+  const pt = document.createTextNode(picArray[it].description);
+  p.appendChild(pt);
+
+  a.appendChild(h);
+  a.appendChild(f);
+  a.appendChild(p);
+
+  pics.appendChild(a);
+}
+/*
+<article class="card">
+   <h2>title_from_picArray</h2>
+   <figure>
+      <img src="medium_image_from_picArray" alt="title_from_picArray">
+      <figcaption>caption_from_picarray</figcaption>
+   </figure>
+   <p>description_from_picArray</p>
+</article>
+ */
