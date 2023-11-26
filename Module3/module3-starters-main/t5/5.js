@@ -121,13 +121,3 @@ for(let it = 0; it < picArray.length; it++){
 
   pics.appendChild(a);
 }
-/*
-<article class="card">
-   <h2>title_from_picArray</h2>
-   <figure>
-      <img src="medium_image_from_picArray" alt="title_from_picArray">
-      <figcaption>caption_from_picarray</figcaption>
-   </figure>
-   <p>description_from_picArray</p>
-</article>
- */
